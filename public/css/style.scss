@@ -101,12 +101,8 @@ h2 {
 a,
 a:hover,
 a:focus {
+  color: white;
   text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: initial;
 }
 
 .btn,
@@ -163,6 +159,10 @@ a:focus {
   }
 }
 
+a:active {
+  color: #fd7e14;
+}
+
 .custom_nav-container .nav_search-btn {
   width: auto;
   height: auto;
@@ -187,11 +187,6 @@ a:focus {
   .user_link {
     color: $white;
 
-
-    &:hover {
-      color: $primary1;
-
-    }
   }
 
   .cart_link {
@@ -295,7 +290,7 @@ a:focus {
 
       &.active {
         background-color: $primary2;
-        color: $white;
+        color: black;
       }
     }
   }

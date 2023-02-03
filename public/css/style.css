@@ -172,6 +172,10 @@ a:focus {
   color: #fd7e14;
 }
 
+a:active {
+  color: #fd7e14;
+}
+
 .custom_nav-container .nav_search-btn {
   width: auto;
   height: auto;
@@ -300,11 +304,12 @@ a:focus {
   padding: 7px 25px;
   cursor: pointer;
   border-radius: 25px;
+  font-weight: bold;
 }
 
 .food_section .filters_menu li.active {
-  background-color: #222831;
-  color: #ffffff;
+  background-color: rgba(34, 40, 49, 0.2);
+  color: black;
 }
 
 .food_section .box {
