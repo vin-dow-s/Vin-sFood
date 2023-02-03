@@ -5,16 +5,62 @@
 {% block body %}
   <main>
       <!-- food section -->
-      <section class="food_section layout_padding">
-        <div class="container">
-          <div class="heading_container heading_center">
-            <h2>
-              Ajouter une recette
-            </h2>
+      <section class="book_section layout_padding">
+          <div class="container">
+              <div class="heading_container">
+                  <h2>
+                      Ajouter une recette
+                  </h2>
+              </div>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="form_container">
+                          <form action="">
+                              <div>
+                                  <input type="text" class="form-control" placeholder="Nom de la recette" />
+                              </div>
+                              <div>
+                                  <input type="number" class="form-control" placeholder="Temps de préparation (min)" />
+                              </div>
+                              <div>
+                                  <input type="number" class="form-control" placeholder="Temps de cuisson (min)" />
+                              </div>
+                              <div>
+                                  <input type="text" class="form-control" placeholder="Liste des ingrédients" />
+                              </div>
+                              <div>
+                                  <input type="text" class="form-control" placeholder="Etapes" />
+                              </div>
+                              <div>
+                                  <select class="form-control nice-select wide">
+                                      <option value="" disabled selected>
+                                          Nombre de personnes
+                                      </option>
+                                      <option value="">
+                                          2
+                                      </option>
+                                      <option value="">
+                                          3
+                                      </option>
+                                      <option value="">
+                                          4
+                                      </option>
+                                      <option value="">
+                                          5
+                                      </option>
+                                  </select>
+                              </div>
+                              <div class="btn_box" style="text-align: center">
+                                  <button>
+                                      Ajouter
+                                  </button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
       </section>
-  </main>
 
   <!-- end food section -->
 {% endblock %}

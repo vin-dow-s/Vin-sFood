@@ -8,7 +8,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @UniqueEntity('nom')
  * @ORM\Entity(repositoryClass=RecetteRepository::class)
  */
 class Recette
@@ -23,6 +22,7 @@ class Recette
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
+     * @Assert\Unique()
      * @Assert\Length(min= 2, max= 100)
      */
     private $nom;

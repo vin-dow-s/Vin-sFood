@@ -103,7 +103,6 @@ address {
 ol,
 ul,
 dl {
-  margin-top: 0;
   margin-bottom: 1rem;
 }
 
@@ -592,6 +591,7 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  justify-content: center;
 }
 
 .no-gutters {

@@ -159,12 +159,13 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 5px 20px;
-  color: black;
+  color: white;
   text-align: center;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 25px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  background-color: #222831;
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
@@ -397,6 +398,7 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -472,6 +474,8 @@ a:focus {
 
 .book_section .heading_container {
   margin-bottom: 25px;
+  display: block;
+  text-align: center;
 }
 
 .book_section .form_container .form-control {
@@ -516,6 +520,7 @@ a:focus {
   display: inline-block;
   padding: 10px 55px;
   color: #ffffff;
+  background-color: #FD7E14;
   border-radius: 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -675,6 +680,7 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
