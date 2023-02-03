@@ -2,8 +2,13 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #0c0c0c;
-  background-color: #ffffff;
   overflow-x: hidden;
+  background-image: url("../images/BG-transparent.png");
+  background-size: 150%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #F0F0F0;
 }
 
 
@@ -31,6 +36,7 @@ h2 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  border-top: 1px solid black;
 }
 
 .heading_container h2 {
@@ -38,6 +44,7 @@ h2 {
   margin-bottom: 0;
   font-size: 2.5rem;
   font-weight: bold;
+  margin-top: 5vh;
 }
 
 .heading_container h2 span {
@@ -76,7 +83,7 @@ a:focus {
 /*header section*/
 .hero_area {
   position: relative;
-  min-height: 20vh;
+  min-height: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +144,7 @@ a:focus {
 
 .navbar-brand span {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 50px;
   color: black;
 }
 
@@ -146,7 +153,8 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav {
-  padding-left: 10%;
+  position: absolute;
+  right: 0;
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
