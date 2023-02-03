@@ -158,7 +158,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 5px 20px;
+  padding: 10px 55px;
   color: white;
   text-align: center;
   text-transform: uppercase;
@@ -639,6 +639,10 @@ a:active {
   border-radius: 100%;
 }
 
+#formRecette {
+  justify-content: center;
+}
+
 /* client section end */
 .contact_section .heading_container {
   margin-bottom: 45px;
@@ -723,7 +727,7 @@ a:active {
 .footer_section h4,
 .footer_section .footer-logo {
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   font-family: 'Dancing Script', cursive;
 }
 
