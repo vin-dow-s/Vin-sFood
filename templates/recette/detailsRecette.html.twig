@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="form2" >
+        {{ form_start(recetteForm) }}
+        {{ form_widget(recetteForm) }}
+
+        <button>Ajouter produit</button>
+        <button><a href="{{ path('main_accueil') }}">Accueil</a></button>
+
+        {{ form_end(recetteForm) }}
+    </div>
+{% endblock %}
+
+{% block title %}{{ parent() }} | Détails recette{% endblock %}
+

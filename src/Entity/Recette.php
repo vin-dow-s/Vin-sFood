@@ -4,8 +4,11 @@ namespace App\Entity;
 
 use App\Repository\RecetteRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
+ * @UniqueEntity('nom')
  * @ORM\Entity(repositoryClass=RecetteRepository::class)
  */
 class Recette
@@ -19,36 +22,45 @@ class Recette
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\Length(min= 2, max= 100)
      */
     private $nom;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank()
+     * @Assert\Positive()
      */
     private $tempsPreparation;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\PositiveOrZero()
      */
     private $tempsCuisson;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Positive()
      */
     private $nbPersonnes;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank()
      */
     private $listeIngredients;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank()
      */
     private $etapes;
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\NotNull()
      */
     private $dateAjout;
 
