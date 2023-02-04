@@ -42,7 +42,7 @@
                                 <div class="box">
                                     <div>
                                         <div class="img-box">
-                                            <img src="{{ asset('images/f1.png') }}" alt="">
+                                            <img src="{{ asset('uploads/images/'~recette.imageName) }}" alt="">
                                         </div>
                                         <div class="detail-box">
                                             <h5>
@@ -53,8 +53,11 @@
                                             </p>
 
                                             <div class="options">
-                                                <img src="{{ asset('images/flags/' ~ recette.categorie ~ '.png') }}" style="width: 25px; height: 25px; margin-top: 7px;" alt="Drapeau">
-                                                <a href="#">DETAILS</a>
+                                                <img src="{{ asset('images/flags/' ~ recette.categorie ~ '.png') }}" style="width: 30px; height: 30px; margin-top: 10px;" alt="Drapeau">
+                                                <button class="cta">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                    <span class="button-text">Détails</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

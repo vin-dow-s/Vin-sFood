@@ -376,16 +376,17 @@ a:active {
   width: 100px;
   height: 40px;
   border-radius: 25px;
-  background: #fd7e14;
+  border: 1px solid #fd7e14;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   transition: all 0.3s;
 }
 
@@ -642,6 +643,7 @@ a:active {
 
 #formRecette {
   justify-content: center;
+  margin-top: 45px;
 }
 
 /* client section end */
@@ -819,3 +821,57 @@ a:active {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+#imgPreview {
+  display: none;
+}
+
+#imgPreview[src] {
+  display: block;
+  width: 300px;
+  height: 300px;
+  outline: none;
+  border: none;
+}
+
+.vich-image {
+  text-align: center;
+    margin-bottom: 1vh;
+}
+
+.cta {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid #fd7e14;
+  background-color: transparent;
+  color: #fff;
+  transition: width 0.7s;
+}
+.cta:hover {
+  width: 100px;
+  transition: width 0.7s;
+}
+
+.cta i {
+  opacity: 1;
+  transition: opacity 0.5s
+}
+
+.cta:hover i {
+  opacity: 0;
+  transition: opacity 0.5s
+}
+
+.cta .button-text {
+  opacity: 0;
+  transition: opacity .5s;
+  position: absolute;
+  width: 42%;
+  right: 0;
+}
+
+.cta:hover .button-text {
+  opacity: 1;
+  transition: opacity 0.5s
+}

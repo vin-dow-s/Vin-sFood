@@ -6,10 +6,13 @@ use App\Repository\RecetteRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=RecetteRepository::class)
+ * @UniqueEntity(fields={"nom"}, message="Nom déjà utilisé.")
+ * @Vich\Uploadable()
  */
 class Recette
 {
@@ -21,9 +24,9 @@ class Recette
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
+     * @ORM\Column(type="string", length=255, nullable=false)
      * @Assert\Unique()
+     * @Assert\NotNull()
      * @Assert\Length(min= 2, max= 100)
      */
     private $nom;
@@ -71,15 +74,39 @@ class Recette
     private $categorie;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $image;
+    private $imageName;
 
     /**
-     * @Vich\UploadableField(mapping="recette_image", fileNameProperty="imageName")
      * @var File|null
+     * @Vich\UploadableField(mapping="recette_image", fileNameProperty="imageName")
      */
     private $imageFile;
+
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
+    public function setImageName(?string $imageName): void
+    {
+        $this->imageName = $imageName;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile|null $imageFile
+     */
+    public function setImageFile(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+    }
+
 
     public function getId(): ?int
     {
@@ -182,27 +209,5 @@ class Recette
         return $this;
     }
 
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
 
-    public function setImage(string $image): self
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
-    public function getImageFile(): ?object
-    {
-        return $this->imageFile;
-    }
-
-    public function setImageFile(object $imageFile): self
-    {
-        $this->imageFile = $imageFile;
-
-        return $this;
-    }
 }

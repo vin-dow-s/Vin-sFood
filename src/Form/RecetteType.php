@@ -4,22 +4,115 @@ namespace App\Form;
 
 use App\Entity\Recette;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class RecetteType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nom')
-            ->add('tempsPreparation')
-            ->add('tempsCuisson')
-            ->add('nbPersonnes')
-            ->add('listeIngredients')
-            ->add('etapes')
-            ->add('dateAjout')
-            ->add('categorie')
+            ->add('nom', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ],
+            ])
+            ->add('tempsPreparation', IntegerType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ],
+                'required' => true,
+            ])
+            ->add('tempsCuisson', IntegerType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ],
+                'required' => true,
+            ])
+            ->add('nbPersonnes', ChoiceType::class, [
+                'attr' => [
+                    'class' => 'form-control nice-select wide'
+                ],
+                'choices' => [
+                    '1' => '1',
+                    '2' => '2',
+                    '3' => '3',
+                    '4' => '4',
+                    '5' => '5'
+                ],
+                'label' => 'Nombre de personnes',
+                'required' => true,
+            ])
+            ->add('listeIngredients', TextareaType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ],
+                'label' => 'Liste des ingrédients',
+                'required' => true,
+            ])
+            ->add('etapes', TextareaType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ],
+                'label' => 'Etapes de la recette'
+            ])
+            ->add('dateAjout', DateType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ],
+                'widget' => 'single_text',
+                'html5' => true,
+                'required' => true,
+                'label' => 'Date d\'ajout'
+            ])
+            ->add('categorie', ChoiceType::class, [
+                'placeholder' => 'Choisir un pays',
+                'choices' => [
+                    'Allemagne' => 'Allemagne',
+                    'Espagne' => 'Espagne',
+                    'Etats-Unis' => 'Etats-Unis',
+                    'France' => 'France',
+                    'Grèce' => 'Grèce',
+                    'Inde' => 'Inde',
+                    'Indonésie' => 'Indonésie',
+                    'Israël' => 'Israël',
+                    'Italie' => 'Italie',
+                    'Liban' => 'Liban',
+                    'Royaume-Uni' => 'Royaume-Uni',
+                    'Suisse' => 'Suisse',
+                    'Vietnam' => 'Vietnam',
+                ],
+                'attr' => [
+                    'class' => 'form-control nice-select wide'
+                ],
+                'multiple' => false,
+                'expanded' => false,
+                'required' => true,
+            ])
+            ->add('imageFile', VichImageType::class, [
+                'label' => 'Photo de la recette',
+                'attr' => [
+                    'id' => 'imgRecette',
+                    'style' => 'text-align: center',
+                    'onchange' => 'loadFile(event)',
+                ],
+                'mapped' => false,
+                'required' => false
+            ])
+            ->add('submit', SubmitType::class, [
+                'attr' => [
+                    'class' => 'btn-box',
+                    'style' => 'text-align: center',
+                ],
+                'label' => 'AJOUTER'
+            ])
         ;
     }
 

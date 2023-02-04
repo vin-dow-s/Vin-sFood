@@ -15,90 +15,14 @@
               <div class="row" id="formRecette">
                   <div class="col-md-6">
                       <div class="form_container">
-                          <form action="">
-                              <div>
-                                  <input type="text" class="form-control" placeholder="Nom de la recette" />
-                              </div>
-                              <div>
-                                  <input type="number" class="form-control" placeholder="Temps de préparation (min)" />
-                              </div>
-                              <div>
-                                  <input type="number" class="form-control" placeholder="Temps de cuisson (min)" />
-                              </div>
-                              <div>
-                                  <input type="text" class="form-control" placeholder="Liste des ingrédients" />
-                              </div>
-                              <div>
-                                  <input type="text" class="form-control" placeholder="Etapes" />
-                              </div>
-                              <div>
-                                  <select class="form-control nice-select wide">
-                                      <option value="" disabled selected>
-                                          Nombre de personnes
-                                      </option>
-                                      <option value="">
-                                          2
-                                      </option>
-                                      <option value="">
-                                          3
-                                      </option>
-                                      <option value="">
-                                          4
-                                      </option>
-                                      <option value="">
-                                          5
-                                      </option>
-                                  </select>
-                              </div>
-                              <div>
-                                  <select class="form-control nice-select wide">
-                                      <option value="" disabled selected>
-                                          Catégorie
-                                      </option>
-                                      <option value=".spain">
-                                          Espagne
-                                      </option>
-                                      <option value=".united-states">
-                                          Etats-Unis
-                                      </option>
-                                      <option value=".france">
-                                          France
-                                      </option>
-                                      <option value=".germany">
-                                          Germany
-                                      </option>
-                                      <option value=".greece">
-                                          Grèce
-                                      </option>
-                                      <option value=".india">
-                                          Inde
-                                      </option>
-                                      <option value=".indonesia">
-                                          Indonésie
-                                      </option>
-                                      <option value=".israel">
-                                          Israël
-                                      </option>
-                                      <option value=".italy">
-                                          Italie
-                                      </option>
-                                      <option value=".lebanon">
-                                          Liban
-                                      </option>
-                                      <option value=".united-kingdom">
-                                          Royaume-Uni
-                                      </option>
-                                      <option value=".switzerland">
-                                          Suisse
-                                      </option>
-                                      <option value=".vietnam">
-                                          Vietnam
-                                      </option>
-                                  </select>
-                              </div>
-                              <div class="btn_box" style="text-align: center">
-                                  <button href="{{ path('main_accueil') }}">Ajouter</button>
-                              </div>
+                          <form method="post" id="recetteForm" enctype="multipart/form-data">
+                              {{ form_start(recetteForm) }}
+                              {{ form_errors(recetteForm) }}
+                              {{ form_widget(recetteForm) }}
+                                  <div style="display: flex; justify-content: center">
+                                      <img id="imgPreview"/>
+                                  </div>
+                              {{ form_end(recetteForm) }}
                           </form>
                       </div>
                   </div>
@@ -107,4 +31,15 @@
       </section>
 
   <!-- end food section -->
+  </main>
+
+<script>
+    let loadFile = function(event) {
+        let imgPreview = document.getElementById('imgPreview');
+        imgPreview.src = URL.createObjectURL(event.target.files[0]);
+        imgPreview.onload = function() {
+            URL.revokeObjectURL(imgPreview.src) // free memory
+        }
+    };
+</script>
 {% endblock %}
