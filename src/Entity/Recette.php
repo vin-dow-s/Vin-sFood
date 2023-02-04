@@ -6,6 +6,7 @@ use App\Repository\RecetteRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=RecetteRepository::class)
@@ -68,6 +69,17 @@ class Recette
      * @ORM\Column(type="string", length=255)
      */
     private $categorie;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="recette_image", fileNameProperty="imageName")
+     * @var File|null
+     */
+    private $imageFile;
 
     public function getId(): ?int
     {
@@ -166,6 +178,30 @@ class Recette
     public function setCategorie(string $categorie): self
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getImageFile(): ?object
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile(object $imageFile): self
+    {
+        $this->imageFile = $imageFile;
 
         return $this;
     }

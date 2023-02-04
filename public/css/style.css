@@ -70,7 +70,7 @@ a:focus {
 
 a:hover,
 a:focus {
-  color: initial;
+  font-size: larger;
 }
 
 .btn,
@@ -373,9 +373,9 @@ a:active {
 }
 
 .food_section .box .options a {
-  width: 40px;
+  width: 100px;
   height: 40px;
-  border-radius: 100%;
+  border-radius: 25px;
   background: #fd7e14;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,6 +386,7 @@ a:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  transition: all 0.3s;
 }
 
 .food_section .box .options a svg {
