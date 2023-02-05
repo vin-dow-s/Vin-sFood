@@ -40,6 +40,14 @@ padding-left: 0;
 
 @media (max-width: 767px) {
 
+  #mainLogo {
+    width: 5em;
+  }
+
+  .heading_container h2 {
+    font-size: 1.8rem;
+  }
+
   .about_section .detail-box,
   .book_section .form_container {
     margin-bottom: 45px;

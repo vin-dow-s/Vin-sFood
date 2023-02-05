@@ -32,7 +32,7 @@ h2 {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
+          flex-direction: row;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -45,6 +45,7 @@ h2 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-top: 5vh;
+  flex: 1;
 }
 
 .heading_container h2 span {
@@ -150,6 +151,8 @@ a:focus {
 
 .custom_nav-container {
   padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .custom_nav-container .navbar-nav {
@@ -356,7 +359,8 @@ a:active {
 }
 
 .food_section .box .detail-box p {
-  font-size: 15px;
+  font-size: 13px;
+  min-height: 39px;
 }
 
 .food_section .box .detail-box h6 {
@@ -848,6 +852,18 @@ a:active {
   color: #fff;
   transition: width 0.7s;
 }
+
+.ajouterRecette {
+  color: black;
+  margin-top: 5vh;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
+}
+
 .cta:hover {
   width: 100px;
   transition: width 0.7s;
@@ -874,4 +890,8 @@ a:active {
 .cta:hover .button-text {
   opacity: 1;
   transition: opacity 0.5s
+}
+
+#mainLogo {
+  width: 7em;
 }

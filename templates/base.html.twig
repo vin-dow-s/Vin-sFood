@@ -11,7 +11,6 @@
     <meta name="keywords" content="" />
     <meta name="description" content="Vin's Food" />
     <meta name="author" content="Vincent" />
-    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="">
 
     <title>{% block title %}Vin's Food{% endblock %}</title>
 
@@ -31,6 +30,9 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
     <!-- responsive style -->
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('images/VinsFood.png') }}">
 
     <script src="https://kit.fontawesome.com/9e59c700b5.js" crossorigin="anonymous"></script>
 </head>
@@ -136,6 +138,14 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
 </script>
 <!-- End Google Map -->
+
+<script>/*
+    $(function(){
+        $('body').on('contextmenu', 'img', function(e){
+            return false;
+        });
+    });*/
+</script>
 
 </body>
 
