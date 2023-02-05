@@ -23,18 +23,21 @@ class RecetteType extends AbstractType
                 'attr' => [
                     'class' => 'form-control'
                 ],
+                'label' => 'Nom de la recette',
             ])
             ->add('tempsPreparation', IntegerType::class, [
                 'attr' => [
                     'class' => 'form-control'
                 ],
+                'label' => 'Temps de préparation',
                 'required' => true,
             ])
             ->add('tempsCuisson', IntegerType::class, [
                 'attr' => [
                     'class' => 'form-control'
                 ],
-                'required' => true,
+                'label' => 'Temps de cuisson',
+                'required' => false,
             ])
             ->add('nbPersonnes', ChoiceType::class, [
                 'attr' => [
@@ -52,7 +55,8 @@ class RecetteType extends AbstractType
             ])
             ->add('listeIngredients', TextareaType::class, [
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'form-control',
+                    'maxlength' => 85
                 ],
                 'label' => 'Liste des ingrédients',
                 'required' => true,
@@ -92,6 +96,7 @@ class RecetteType extends AbstractType
                 'attr' => [
                     'class' => 'form-control nice-select wide'
                 ],
+                'label' => 'Pays d\'origine',
                 'multiple' => false,
                 'expanded' => false,
                 'required' => true,

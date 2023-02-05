@@ -10,6 +10,12 @@
         <section class="food_section layout_padding-bottom">
             <div class="container">
 
+                {% for message in app.flashes('success') %}
+                <div class="alert alert-success mt-4" style="text-align: center">
+                    {{ message }}
+                </div>
+                {% endfor %}
+
                 <div class="heading_container heading_center">
                     <button class="ajouterRecette" style="visibility: hidden">
                         <i class="fa-solid fa-plus"></i>
@@ -60,11 +66,10 @@
                                             </p>
 
                                             <div class="options">
+                                                <span>
+                                                     <button class="book-btn"><img class="book" src="{{ asset('images/open-book.png') }}">Détails</button>
+                                                </span>
                                                 <img src="{{ asset('images/flags/' ~ recette.categorie ~ '.png') }}" style="width: 30px; height: 30px; margin-top: 10px;" alt="Drapeau">
-                                                <button class="cta">
-                                                    <i class="fa-solid fa-plus"></i>
-                                                    <span class="button-text">Détails</span>
-                                                </button>
                                             </div>
                                         </div>
                                     </div>

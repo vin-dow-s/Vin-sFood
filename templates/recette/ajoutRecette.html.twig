@@ -18,10 +18,21 @@
                           <form method="post" id="recetteForm" enctype="multipart/form-data">
                               {{ form_start(recetteForm) }}
                               {{ form_errors(recetteForm) }}
-                              {{ form_widget(recetteForm) }}
+                              {{ form_row(recetteForm.nom) }}
+                              {{ form_row(recetteForm.tempsPreparation) }}
+                              {{ form_row(recetteForm.tempsCuisson) }}
+                              {{ form_row(recetteForm.nbPersonnes) }}
+                              {{ form_row(recetteForm.listeIngredients) }}
+                              {{ form_row(recetteForm.etapes) }}
+                              {{ form_row(recetteForm.dateAjout) }}
+                              {{ form_row(recetteForm.categorie) }}
+                              {{ form_row(recetteForm.imageFile) }}
                                   <div style="display: flex; justify-content: center">
                                       <img id="imgPreview"/>
                                   </div>
+                              <div class="form-submit">
+                                {{ form_row(recetteForm.submit) }}
+                              </div>
                               {{ form_end(recetteForm) }}
                           </form>
                       </div>

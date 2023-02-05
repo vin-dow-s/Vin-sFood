@@ -3,6 +3,11 @@
 @media (max-width: 1120px) {}
 
 @media (max-width: 992px) {
+
+  main {
+    background-size: cover;
+  }
+
   .hero_area {
     min-height: auto;
   }

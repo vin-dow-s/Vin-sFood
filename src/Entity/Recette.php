@@ -52,8 +52,9 @@ class Recette
     private $nbPersonnes;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="string", length=85)
      * @Assert\NotBlank()
+     * @Assert\Length(max=85)
      */
     private $listeIngredients;
 
