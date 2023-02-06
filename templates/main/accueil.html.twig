@@ -66,12 +66,14 @@
                                                 {{ recette.nom }}
                                             </h5>
                                             <p>
-                                                {{ recette.listeIngredients }}
+                                                {{ recette.apercuIngredients }}
                                             </p>
 
                                             <div class="options">
                                                 <span>
-                                                     <button class="book-btn"><img class="book" src="{{ asset('images/open-book.png') }}">Détails</button>
+                                                    <a href="{{ path('detailsRecette', {'id': recette.id}) }}">
+                                                        <button class="book-btn"><img class="book" src="{{ asset('images/open-book.png') }}">Détails</button>
+                                                    </a>
                                                 </span>
                                                 <img src="{{ asset('images/flags/' ~ recette.categorie ~ '.png') }}" style="width: 30px; height: 30px; margin-top: 10px;" alt="Drapeau">
                                             </div>

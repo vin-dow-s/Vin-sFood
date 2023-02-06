@@ -54,7 +54,7 @@ class Recette
      * @Assert\NotBlank()
      * @Assert\Length(max=85)
      */
-    private $listeIngredients;
+    private $apercuIngredients;
 
     /**
      * @ORM\Column(type="text")
@@ -88,6 +88,11 @@ class Recette
      * @ORM\Column(type="datetime_immutable", nullable=true)
      */
     private \DateTimeImmutable $updatedAt;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $listeIngredients;
 
     public function getImageName(): ?string
     {
@@ -169,14 +174,14 @@ class Recette
         return $this;
     }
 
-    public function getListeIngredients(): ?string
+    public function getApercuIngredients(): ?string
     {
-        return $this->listeIngredients;
+        return $this->apercuIngredients;
     }
 
-    public function setListeIngredients(string $listeIngredients): self
+    public function setApercuIngredients(string $apercuIngredients): self
     {
-        $this->listeIngredients = $listeIngredients;
+        $this->apercuIngredients = $apercuIngredients;
 
         return $this;
     }
@@ -232,6 +237,18 @@ class Recette
     public function setUpdatedAt(\DateTimeImmutable $updatedAt): Recette
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getListeIngredients(): ?string
+    {
+        return $this->listeIngredients;
+    }
+
+    public function setListeIngredients(string $listeIngredients): self
+    {
+        $this->listeIngredients = $listeIngredients;
 
         return $this;
     }

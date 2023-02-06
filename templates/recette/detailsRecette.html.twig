@@ -1,16 +1,50 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}{{ parent() }} | {{ recette.nom }}{% endblock %}
+
 {% block body %}
-    <div class="form2" >
-        {{ form_start(recetteForm) }}
-        {{ form_widget(recetteForm) }}
-
-        <button>Ajouter produit</button>
-        <button><a href="{{ path('main_accueil') }}">Accueil</a></button>
-
-        {{ form_end(recetteForm) }}
-    </div>
+    <main>
+    <section class="book_section layout_padding">
+        <div class="container">
+            <div>
+                <h2 id="nomRecetteDetails" class="heading_container">{{ recette.nom }}</h2>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div>
+                            <p class="intituleEtapes">Etapes de la recette :</p>
+                        </div>
+                        <div class="etapesRecetteDiv">
+                            {% for line in recette.etapes|split('\n') %}
+                                <p><span class="etapesRecette" style="font-weight:bold;">{{ line[:2] }}</span>{{ line[2:] }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-3 infosRecette" style="text-align: left">
+                        <div class="infosRecetteRow">
+                            <p class="intitule">Temps de préparation :<br></p> {{ recette.tempsPreparation }} minutes
+                        </div>
+                        <div class="infosRecetteRow">
+                            {% if recette.tempsCuisson>60 %}
+                                <p class="intitule">Temps de cuisson :</p> {{ (recette.tempsCuisson|round(0, 'ceil')/60) }} heure {{ (recette.tempsCuisson|round(0, 'ceil')%60) }} minutes
+                            {% elseif recette.tempsCuisson == 60 %}
+                                <p class="intitule">Temps de cuisson :</p> {{ (recette.tempsCuisson|round(0, 'ceil')/60) }} heure
+                            {% else %}
+                                <p class="intitule">Temps de cuisson :</p> {{ (recette.tempsCuisson) }} minutes
+                            {% endif %}
+                        </div>
+                        <div class="infosRecetteRow">
+                            <p class="intitule">Nombre de personnes :</p> {{ recette.nbPersonnes }} personnes
+                        </div>
+                        <div class="infosRecetteRow">
+                            <p class="intitule">Liste des ingrédients :</p>
+                            <p>{{ recette.listeIngredients|nl2br }} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
 {% endblock %}
 
-{% block title %}{{ parent() }} | Détails recette{% endblock %}
 

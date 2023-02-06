@@ -53,10 +53,17 @@ class RecetteType extends AbstractType
                 'label' => 'Nombre de personnes',
                 'required' => true,
             ])
-            ->add('listeIngredients', TextareaType::class, [
+            ->add('apercuIngredients', TextType::class, [
                 'attr' => [
                     'class' => 'form-control',
                     'maxlength' => 85
+                ],
+                'label' => 'Aperçu des ingrédients',
+                'required' => true,
+            ])
+            ->add('listeIngredients', TextareaType::class, [
+                'attr' => [
+                    'class' => 'form-control',
                 ],
                 'label' => 'Liste des ingrédients',
                 'required' => true,
