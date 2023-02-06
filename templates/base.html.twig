@@ -40,7 +40,7 @@
 <body>
 
 <div class="hero_area">
-    <!-- header section strats -->
+    <!-- NAV -->
     <header class="header_section">
         <div class="container">
             {% include("inc/nav.html.twig") %}
@@ -49,9 +49,8 @@
 </div>
 
 {% block body %}{% endblock %}
-<!-- end food section -->
 
-<!-- footer section -->
+<!-- FOOTER -->
 <footer class="footer_section">
     <div class="container">
         <div class="row">
@@ -107,6 +106,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
 <!-- custom js -->
 <script src="{{ asset('js/custom.js') }}"></script>
+
+<!-- DESACTIVER LE CLIC SUR LES IMAGES -->
 <script>/*
     $(function(){
         $('body').on('contextmenu', 'img', function(e){

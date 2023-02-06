@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class RecetteController extends AbstractController
 {
     /**
-     * ADD A NEW RECIPE
+     * CREATE : ADD A NEW RECIPE
      * @Route("/ajoutRecette", name="ajoutRecette", methods={"GET", "POST"})
      */
     public function ajoutRecette(Request $request, EntityManagerInterface $entityManager): Response
@@ -46,7 +46,7 @@ class RecetteController extends AbstractController
     }
 
     /**
-     * EDIT A RECIPE
+     * UPDATE : EDIT A RECIPE
      * @Route("/modifierRecette/{id}", name="modifierRecette", methods={"GET", "POST"})
      */
     public function modifierRecette(Recette $recette, Request $request, EntityManagerInterface $entityManager): Response
@@ -84,7 +84,7 @@ class RecetteController extends AbstractController
     }
 
     /**
-     * DELETE A RECIPE
+     * DELETE : DELETE A RECIPE
      * @Route("/supprimerRecette/{id}", name="supprimerRecette", methods={"GET", "POST"})
      */
     public function supprimerRecette(Recette $recette, EntityManagerInterface $entityManager): Response

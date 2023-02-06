@@ -10,6 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainController extends AbstractController
 {
     /**
+     * READ : SHOW ALL RECIPES, ORDERED BY DATE 'DESC' (LATEST FIRST)
      * @Route("/", name="main_accueil")
      */
     public function listeRecettes(RecetteRepository $repo): Response

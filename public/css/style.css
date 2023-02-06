@@ -879,6 +879,16 @@ a:active {
   width: 7em;
 }
 
+#veggie {
+  width: 30px;
+  height: 30px;
+  margin-top: 13px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 13px;
+}
+
 #edit {
   width: 30px;
   height: 30px;
@@ -907,7 +917,6 @@ a:active {
 
 .img-recette #img-recette {
   width: 300px;
-  margin-bottom: 45px;
 }
 
 .infosRecetteRow {

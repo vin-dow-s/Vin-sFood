@@ -4,7 +4,7 @@
 
 {% block body %}
   <main>
-      <!-- food section -->
+      <!-- MAIN -->
       <section class="book_section layout_padding">
           <div class="container">
               <div class="heading_container">
@@ -12,6 +12,7 @@
                       Ajouter une recette
                   </h2>
               </div>
+              <!-- FORMULAIRE AJOUT RECETTE -->
               <div class="row" id="formRecette">
                   <div class="col-md-6">
                       <div class="form_container">
@@ -37,6 +38,7 @@
                               {{ form_row(recetteForm.categorie) }}
                                     {{ form_errors(recetteForm.imageFile, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.imageFile) }}
+                              <!-- PREVIEW IMAGE LIEE SCRIPT -->
                                   <div style="display: flex; justify-content: center">
                                       <img id="imgPreview"/>
                                   </div>

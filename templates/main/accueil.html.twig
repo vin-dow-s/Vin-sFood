@@ -57,8 +57,16 @@
                                 <div class="box">
                                     <div>
                                         <div class="img-box">
+                                            <!-- IMAGE RECETTE -->
                                             <img src="{{ asset('images/recettes/'~recette.imageName) }}" id="img-recette" alt="Recette">
+                                            <!-- LOGO VEGGIE
+                                            {#
+                                            <img src="{{ asset('images/veggie.png') }}" id="veggie">
+                                            #}
+                                            -->
+                                            <!-- LOGO MODIFIER RECETTE (ADMIN ONLY) -->
                                             <a href="{{ path('modifierRecette', {'id' : recette.id}) }}" id="edit"><img src="{{ asset('images/edit.png') }}" alt="Edit"></a>
+                                            <!-- LOGO SUPPRIMER RECETTE (ADMIN ONLY) -->
                                             <a href="{{ path('supprimerRecette', {'id': recette.id}) }}" id="delete"><img src="{{ asset('images/delete.png') }}" alt="Delete"></a>
                                         </div>
                                         <div class="detail-box">
