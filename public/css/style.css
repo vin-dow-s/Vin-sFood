@@ -900,7 +900,21 @@ a:active {
   border-left: 1px solid black;
 }
 
+.img-recette {
+  display: flex;
+  justify-content: center;
+}
+
+.img-recette #img-recette {
+  width: 300px;
+  margin-bottom: 45px;
+}
+
 .infosRecetteRow {
+  margin-bottom: 1em;
+}
+
+.apercuIngredients {
   margin-bottom: 1em;
 }
 
@@ -922,7 +936,7 @@ a:active {
   text-align: left;
 }
 
-.row p {
+.row .intitule {
   margin-bottom: 0;
 }
 
