@@ -17,15 +17,23 @@
                       <div class="form_container">
                           <form method="post" id="recetteForm" enctype="multipart/form-data">
                               {{ form_start(recetteForm) }}
-                              {{ form_errors(recetteForm) }}
+                                    {{ form_errors(recetteForm.nom, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.nom) }}
+                                    {{ form_errors(recetteForm.tempsPreparation, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.tempsPreparation) }}
+                                    {{ form_errors(recetteForm.tempsCuisson, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.tempsCuisson) }}
+                                     {{ form_errors(recetteForm.nbPersonnes, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.nbPersonnes) }}
+                                    {{ form_errors(recetteForm.listeIngredients, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.listeIngredients) }}
+                                    {{ form_errors(recetteForm.etapes, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.etapes) }}
+                                    {{ form_errors(recetteForm.dateAjout, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.dateAjout) }}
+                                    {{ form_errors(recetteForm.categorie, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.categorie) }}
+                                    {{ form_errors(recetteForm.imageFile, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.imageFile) }}
                                   <div style="display: flex; justify-content: center">
                                       <img id="imgPreview"/>

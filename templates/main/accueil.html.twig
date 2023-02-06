@@ -4,18 +4,10 @@
 
 {% block body %}
     <main>
-        <!-- food section -->
-
-
+        <!-- MAIN -->
         <section class="food_section layout_padding-bottom">
             <div class="container">
-
-                {% for message in app.flashes('success') %}
-                <div class="alert alert-success mt-4" style="text-align: center">
-                    {{ message }}
-                </div>
-                {% endfor %}
-
+                <!-- LES RECETTES + BOUTON AJOUT RECETTE -->
                 <div class="heading_container heading_center">
                     <button class="ajouterRecette" style="visibility: hidden">
                         <i class="fa-solid fa-plus"></i>
@@ -29,6 +21,15 @@
                         </button>
                     </a>
                 </div>
+
+                <!-- FLASH MESSAGE -->
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success mt-4" style="text-align: center">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+                <!-- FILTRES PAYS -->
                 <ul class="filters_menu">
                     <li class="active" data-filter="*" style="padding-top: 9px">TOUT</li>
                     <li data-filter=".France"><img src="{{ asset('images/flags/France.png') }}" style="width: 25px;"></li>
@@ -46,16 +47,19 @@
                     <li data-filter=".Vietnam"><img src="{{ asset('images/flags/Vietnam.png') }}" style="width: 25px;"></li>
                 </ul>
 
+                <!-- RECETTES -->
                 <div class="filters-content">
                     <div class="row grid">
                         {% if not recettes is same as([])  %}
-                            <!-- Carte d'une recette -->
+                            <!-- CARTE D'UNE RECETTE -->
                             {% for recette in recettes %}
                             <div class="col-sm-6 col-lg-4 all {{ recette.categorie }}">
                                 <div class="box">
                                     <div>
                                         <div class="img-box">
-                                            <img src="{{ asset('images/recettes/'~recette.imageName) }}" alt="Recette">
+                                            <img src="{{ asset('images/recettes/'~recette.imageName) }}" id="img-recette" alt="Recette">
+                                            <a href="{{ path('modifierRecette', {'id' : recette.id}) }}" id="edit"><img src="{{ asset('images/edit.png') }}" alt="Edit"></a>
+                                            <a href="{{ path('supprimerRecette', {'id': recette.id}) }}" id="delete"><img src="{{ asset('images/delete.png') }}" alt="Delete"></a>
                                         </div>
                                         <div class="detail-box">
                                             <h5>

@@ -12,7 +12,6 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=RecetteRepository::class)
- * @UniqueEntity(fields={"nom"}, message="Nom déjà utilisé.")
  * @Vich\Uploadable()
  */
 class Recette
@@ -26,7 +25,6 @@ class Recette
 
     /**
      * @ORM\Column(type="string", length=255, nullable=false)
-     * @Assert\Unique()
      * @Assert\NotNull()
      * @Assert\Length(min= 2, max= 100)
      */

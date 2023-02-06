@@ -72,11 +72,6 @@ a:focus {
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
-  font-size: larger;
-}
-
 .btn,
 .btn:focus {
   outline: none !important;
@@ -403,7 +398,7 @@ a:active {
   fill: #ffffff;
 }
 
-.food_section .box:hover .img-box img {
+.food_section .box:hover #img-recette {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -885,4 +880,21 @@ a:active {
 
 #mainLogo {
   width: 7em;
+}
+
+#edit {
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#delete {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 47%;
+  right: 0;
 }
