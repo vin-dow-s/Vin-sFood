@@ -9,12 +9,20 @@
         <div class="container">
             <div>
                 <!-- DETAILS RECETTE -->
-                <h2 id="nomRecetteDetails" class="heading_container">{{ recette.nom }}</h2>
                 <a href="{{ path('main_accueil') }}">
                     <button class="retourAccueil">
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
                 </a>
+                <h2 id="nomRecetteDetails" class="heading_container">{{ recette.nom }}</h2>
+
+                <!-- FLASH MESSAGE -->
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success mt-4" style="text-align: center">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
                 <div class="row details" style="margin-bottom: 30px">
                     <!-- COLONNE ETAPES -->
                     <div class="col-md-9">
