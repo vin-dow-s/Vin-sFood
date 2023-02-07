@@ -21,21 +21,25 @@
                                     {{ form_errors(recetteForm.nom, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.nom) }}
                               <div style="display: flex">
-                                  <div class="col-sm-6">
+                                  <div class="col-sm-4" style="padding-left: 0">
                                       {{ form_errors(recetteForm.tempsPreparation, {'class': 'error-message'}) }}
                                       {{ form_row(recetteForm.tempsPreparation) }}
                                   </div>
-                                  <div class="col-sm-6">
+                                  <div class="col-sm-4">
                                       {{ form_errors(recetteForm.tempsCuisson, {'class': 'error-message'}) }}
                                       {{ form_row(recetteForm.tempsCuisson) }}
                                   </div>
+                                  <div class="col-sm-4" style="padding-right: 0">
+                                      {{ form_errors(recetteForm.tempsRepos, {'class': 'error-message'}) }}
+                                      {{ form_row(recetteForm.tempsRepos) }}
+                                  </div>
                               </div>
                               <div style="display: flex">
-                                  <div class="col-sm-6">
+                                  <div class="col-sm-6" style="padding-left: 0">
                                       {{ form_errors(recetteForm.nbPersonnes, {'class': 'error-message'}) }}
                                       {{ form_row(recetteForm.nbPersonnes) }}
                                   </div>
-                                  <div class="col-sm-6">
+                                  <div class="col-sm-6" style="padding-right: 0">
                                       {{ form_errors(recetteForm.dateAjout, {'class': 'error-message'}) }}
                                       {{ form_row(recetteForm.dateAjout) }}
                                   </div>

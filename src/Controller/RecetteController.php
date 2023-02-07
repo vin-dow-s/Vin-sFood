@@ -42,7 +42,9 @@ class RecetteController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('success', 'Recette ajoutée avec succès !');
-            return $this->redirectToRoute('main_accueil');
+            return $this->redirectToRoute('detailsRecette', [
+                "id" => $recette->getId()
+            ]);
         }
 
         return $this->render('recette/ajoutRecette.html.twig', [
@@ -85,7 +87,9 @@ class RecetteController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('success', 'Recette modifiée avec succès !');
-            return $this->redirectToRoute('main_accueil');
+            return $this->redirectToRoute('detailsRecette', [
+                "id" => $recette->getId()
+            ]);
         }
 
         return $this->render('recette/modifierRecette.html.twig', [

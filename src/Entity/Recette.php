@@ -45,6 +45,12 @@ class Recette
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\PositiveOrZero()
+     */
+    private $tempsRepos;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
      * @Assert\Positive()
      */
     private $nbPersonnes;
@@ -93,6 +99,7 @@ class Recette
      * @ORM\Column(type="text")
      */
     private $listeIngredients;
+
 
     public function getImageName(): ?string
     {
@@ -249,6 +256,18 @@ class Recette
     public function setListeIngredients(string $listeIngredients): self
     {
         $this->listeIngredients = $listeIngredients;
+
+        return $this;
+    }
+
+    public function getTempsRepos(): ?int
+    {
+        return $this->tempsRepos;
+    }
+
+    public function setTempsRepos(?int $tempsRepos): self
+    {
+        $this->tempsRepos = $tempsRepos;
 
         return $this;
     }

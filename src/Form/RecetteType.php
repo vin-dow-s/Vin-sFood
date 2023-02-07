@@ -39,6 +39,13 @@ class RecetteType extends AbstractType
                 'label' => 'Temps de cuisson',
                 'required' => false,
             ])
+            ->add('tempsRepos', IntegerType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ],
+                'label' => 'Temps de repos',
+                'required' => false,
+            ])
             ->add('nbPersonnes', ChoiceType::class, [
                 'attr' => [
                     'class' => 'form-control nice-select wide'
@@ -81,7 +88,7 @@ class RecetteType extends AbstractType
                 'widget' => 'single_text',
                 'html5' => true,
                 'required' => true,
-                'label' => 'Date d\'ajout'
+                'label' => 'Date d\'ajout de la recette'
             ])
             ->add('categorie', ChoiceType::class, [
                 'placeholder' => 'Choisir un pays',
