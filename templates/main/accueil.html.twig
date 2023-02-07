@@ -9,17 +9,23 @@
             <div class="container">
                 <!-- LES RECETTES + BOUTON AJOUT RECETTE -->
                 <div class="heading_container heading_center">
-                    <button class="ajouterRecette" style="visibility: hidden">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                    <h2>
-                        Les recettes
-                    </h2>
-                    <a href="{{ path('ajoutRecette') }}">
-                        <button class="ajouterRecette">
-                                <i class="fa-solid fa-plus"></i>
+                    {% if app.user %}
+                        <button class="ajouterRecette" style="visibility: hidden">
+                            <i class="fa-solid fa-plus"></i>
                         </button>
-                    </a>
+                        <h2>
+                            Les recettes
+                        </h2>
+                            <a href="{{ path('ajoutRecette') }}">
+                                <button class="ajouterRecette">
+                                        <i class="fa-solid fa-plus"></i>
+                                </button>
+                            </a>
+                    {% else %}
+                        <h2>
+                            Les recettes
+                        </h2>
+                    {% endif %}
                 </div>
 
                 <!-- FLASH MESSAGE -->
@@ -64,10 +70,12 @@
                                             <img src="{{ asset('images/veggie.png') }}" id="veggie">
                                             #}
                                             -->
-                                            <!-- LOGO MODIFIER RECETTE (ADMIN ONLY) -->
-                                            <a href="{{ path('modifierRecette', {'id' : recette.id}) }}" id="edit"><img src="{{ asset('images/edit.png') }}" alt="Edit"></a>
-                                            <!-- LOGO SUPPRIMER RECETTE (ADMIN ONLY) -->
-                                            <a href="{{ path('supprimerRecette', {'id': recette.id}) }}" id="delete"><img src="{{ asset('images/delete.png') }}" alt="Delete"></a>
+                                            {% if app.user %}
+                                                <!-- LOGO MODIFIER RECETTE (ADMIN ONLY) -->
+                                                <a href="{{ path('modifierRecette', {'id' : recette.id}) }}" id="edit"><img src="{{ asset('images/edit.png') }}" alt="Edit"></a>
+                                                <!-- LOGO SUPPRIMER RECETTE (ADMIN ONLY) -->
+                                                <a href="{{ path('supprimerRecette', {'id': recette.id}) }}" id="delete"><img src="{{ asset('images/delete.png') }}" alt="Delete"></a>
+                                            {% endif %}
                                         </div>
                                         <div class="detail-box">
                                             <h5>

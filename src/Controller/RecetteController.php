@@ -20,6 +20,11 @@ class RecetteController extends AbstractController
      */
     public function ajoutRecette(Request $request, EntityManagerInterface $entityManager): Response
     {
+        if(!$this->getUser()) {
+            $this->addFlash('error', 'Accès refusé');
+            return $this->redirectToRoute('main_accueil');
+        }
+
         $recette = new Recette();
 
         $recetteForm = $this->createForm(RecetteType::class, $recette);
@@ -51,6 +56,11 @@ class RecetteController extends AbstractController
      */
     public function modifierRecette(Recette $recette, Request $request, EntityManagerInterface $entityManager): Response
     {
+        if(!$this->getUser()) {
+            $this->addFlash('error', 'Accès refusé');
+            return $this->redirectToRoute('main_accueil');
+        }
+
         $recetteForm = $this->createForm(RecetteType::class, $recette);
 
         $recetteForm->handleRequest($request);
@@ -89,6 +99,11 @@ class RecetteController extends AbstractController
      */
     public function supprimerRecette(Recette $recette, EntityManagerInterface $entityManager): Response
     {
+        if(!$this->getUser()) {
+            $this->addFlash('error', 'Accès refusé');
+            return $this->redirectToRoute('main_accueil');
+        }
+
         $entityManager->remove($recette);
         $entityManager->flush();
 
