@@ -81,6 +81,10 @@ padding-left: 0;
     font-size: 11px;
   }
 
+  .retourAccueil {
+    margin-top: 47px;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -124,6 +128,10 @@ padding-left: 0;
   .infosRecetteRow {
     margin-left: 0;
     text-align: justify;
+  }
+
+  .retourAccueil {
+    margin-top: 10em;
   }
 }
 
