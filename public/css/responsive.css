@@ -18,7 +18,7 @@
 
   .custom_nav-container .navbar-nav {
     padding-top: 15px;
-padding-left: 0;
+    padding-left: 0;
     align-items: center;
   }
 
@@ -119,6 +119,19 @@ padding-left: 0;
   .infosRecetteRow {
     margin-left: 2em;
     margin-right: 2em;
+  }
+
+  .retourAccueil {
+    display: none;
+  }
+
+  .col-md-9 {
+    order: 2;
+  }
+
+  .col-md-3 {
+    order: 1;
+    display: block;
   }
 }
 
