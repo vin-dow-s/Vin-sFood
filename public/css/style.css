@@ -6,7 +6,7 @@ body {
 }
 
 main {
-  background-image: url("../images/BG-transparent.png");
+  background-image: url("../images/BG-transparent.webp");
   background-size: 189%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -369,6 +369,7 @@ a:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-tap-highlight-color: transparent;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -723,7 +724,6 @@ a:active {
 .footer_section {
   background-color: #222831;
   color: #ffffff;
-  padding: 75px 0 40px 0;
   text-align: center;
 }
 
@@ -742,9 +742,6 @@ a:active {
   color: #dbdbdb;
 }
 
-.footer_section .footer-col {
-  margin-bottom: 30px;
-}
 
 .footer_section .footer_contact .contact_link_box {
   display: -webkit-box;
@@ -769,7 +766,7 @@ a:active {
 }
 
 .footer_section .footer-logo {
-  display: block;
+  display: none;
   font-weight: bold;
   font-size: 38px;
   line-height: 1;

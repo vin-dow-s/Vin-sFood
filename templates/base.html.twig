@@ -34,7 +34,7 @@
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('images/VinsFood.png') }}">
 
-    <script src="https://kit.fontawesome.com/9e59c700b5.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9e59c700b5.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
@@ -56,10 +56,7 @@
         <div class="row">
             <div class="col-md-12 footer-col">
                 <div class="footer_detail">
-                    <a href="{{ path('main_accueil') }}" class="footer-logo">
-                        Vin's Food
-                    </a>
-                    <!--
+                    <!-- LOGOS
                     <div class="footer_social">
                         <a href="">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -106,15 +103,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
 <!-- custom js -->
 <script src="{{ asset('js/custom.js') }}"></script>
-
-<!-- DESACTIVER LE CLIC SUR LES IMAGES -->
-<script>/*
-    $(function(){
-        $('body').on('contextmenu', 'img', function(e){
-            return false;
-        });
-    });*/
-</script>
 
 </body>
 

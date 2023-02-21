@@ -18,7 +18,7 @@
 
   .custom_nav-container .navbar-nav {
     padding-top: 15px;
-    padding-left: 0;
+padding-left: 0;
     align-items: center;
   }
 
@@ -120,18 +120,18 @@
     margin-left: 2em;
     margin-right: 2em;
   }
-
+  
   .retourAccueil {
-    display: none;
+      display: none;
   }
-
+  
   .col-md-9 {
-    order: 2;
+      order: 2;
   }
-
+  
   .col-md-3 {
-    order: 1;
-    display: block;
+      order: 1;
+      display: block;
   }
 }
 

@@ -222,10 +222,6 @@ button {
   border-radius: 0;
 }
 
-button:focus {
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
 input,
 button,
 select,
@@ -10024,4 +10020,3 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
