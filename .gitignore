@@ -1,4 +1,9 @@
 ./.idea/
+./.htaccess
+.htaccess_disabled
+.htaccess
+index.php
+./index.php
 
 ###> symfony/framework-bundle ###
 /.env

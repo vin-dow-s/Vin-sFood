@@ -69,7 +69,7 @@
                                     <div>
                                         <div class="img-box">
                                             <!-- IMAGE RECETTE -->
-                                            <img src="{{ asset('images/recettes/'~recette.imageName) }}" id="img-recette" alt="Recette">
+                                            <img src="{{ asset('images/recettes/'~recette.imageName) }}" class="img-recette" alt="Recette">
                                             <!-- LOGO VEGGIE
                                             {#
                                             <img src="{{ asset('images/veggie.png') }}" id="veggie">
@@ -91,9 +91,7 @@
                                             </p>
                                             <div class="options">
                                                 <span>
-                                                    <a href="{{ path('detailsRecette', {'id': recette.id}) }}">
-                                                        <button class="book-btn"><img class="book" src="{{ asset('images/open-book.png') }}" alt="logoDétailsRecette">Détails</button>
-                                                    </a>
+                                                    <button class="book-btn"><a href="{{ path('detailsRecette', {'id': recette.id}) }}"><img class="book" src="{{ asset('images/open-book.png') }}" alt="logoDétailsRecette">Détails</a></button>
                                                 </span>
                                                 <img src="{{ asset('images/flags/' ~ recette.categorie ~ '.png') }}" style="width: 30px; height: 30px; margin-top: 10px;" alt="DrapeauPays">
                                             </div>
