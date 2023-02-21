@@ -43,19 +43,19 @@
                 <!-- FILTRES PAYS -->
                 <ul class="filters_menu">
                     <li class="active" data-filter="*" style="padding-top: 9px">TOUT</li>
-                    <li data-filter=".France"><img src="{{ asset('images/flags/France.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Italie"><img src="{{ asset('images/flags/Italie.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Royaume-Uni"><img src="{{ asset('images/flags/Royaume-Uni.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Espagne"><img src="{{ asset('images/flags/Espagne.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Grèce"><img src="{{ asset('images/flags/Grèce.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Inde"><img src="{{ asset('images/flags/Inde.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Suisse"><img src="{{ asset('images/flags/Suisse.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Allemagne"><img src="{{ asset('images/flags/Allemagne.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Israël"><img src="{{ asset('images/flags/Israël.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Etats-Unis"><img src="{{ asset('images/flags/Etats-Unis.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Indonésie"><img src="{{ asset('images/flags/Indonésie.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Liban"><img src="{{ asset('images/flags/Liban.png') }}" style="width: 25px;"></li>
-                    <li data-filter=".Vietnam"><img src="{{ asset('images/flags/Vietnam.png') }}" style="width: 25px;"></li>
+                    <li data-filter=".France"><img src="{{ asset('images/flags/France.png') }}" style="width: 25px;" alt="France"></li>
+                    <li data-filter=".Italie"><img src="{{ asset('images/flags/Italie.png') }}" style="width: 25px;" alt="Italie"></li>
+                    <li data-filter=".Royaume-Uni"><img src="{{ asset('images/flags/Royaume-Uni.png') }}" style="width: 25px;" alt="Royaume-Uni"></li>
+                    <li data-filter=".Espagne"><img src="{{ asset('images/flags/Espagne.png') }}" style="width: 25px;" alt="Espagne"></li>
+                    <li data-filter=".Grèce"><img src="{{ asset('images/flags/Grèce.png') }}" style="width: 25px;" alt="Grèce"></li>
+                    <li data-filter=".Inde"><img src="{{ asset('images/flags/Inde.png') }}" style="width: 25px;" alt="Inde"></li>
+                    <li data-filter=".Suisse"><img src="{{ asset('images/flags/Suisse.png') }}" style="width: 25px;" alt="Suisse"></li>
+                    <li data-filter=".Allemagne"><img src="{{ asset('images/flags/Allemagne.png') }}" style="width: 25px;" alt="Allemagne"></li>
+                    <li data-filter=".Israël"><img src="{{ asset('images/flags/Israël.png') }}" style="width: 25px;" alt="Israël"></li>
+                    <li data-filter=".Etats-Unis"><img src="{{ asset('images/flags/Etats-Unis.png') }}" style="width: 25px;" alt="Etats-Unis"></li>
+                    <li data-filter=".Indonésie"><img src="{{ asset('images/flags/Indonésie.png') }}" style="width: 25px;" alt="Indonésie"></li>
+                    <li data-filter=".Liban"><img src="{{ asset('images/flags/Liban.png') }}" style="width: 25px;" alt="Liban"></li>
+                    <li data-filter=".Vietnam"><img src="{{ asset('images/flags/Vietnam.png') }}" style="width: 25px;" alt="Vietnam"></li>
                 </ul>
 
                 <!-- RECETTES -->
@@ -92,10 +92,10 @@
                                             <div class="options">
                                                 <span>
                                                     <a href="{{ path('detailsRecette', {'id': recette.id}) }}">
-                                                        <button class="book-btn"><img class="book" src="{{ asset('images/open-book.png') }}">Détails</button>
+                                                        <button class="book-btn"><img class="book" src="{{ asset('images/open-book.png') }}" alt="logoDétailsRecette">Détails</button>
                                                     </a>
                                                 </span>
-                                                <img src="{{ asset('images/flags/' ~ recette.categorie ~ '.png') }}" style="width: 30px; height: 30px; margin-top: 10px;" alt="Drapeau">
+                                                <img src="{{ asset('images/flags/' ~ recette.categorie ~ '.png') }}" style="width: 30px; height: 30px; margin-top: 10px;" alt="DrapeauPays">
                                             </div>
                                         </div>
                                     </div>
