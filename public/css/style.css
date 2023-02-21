@@ -914,6 +914,10 @@ a:active {
   justify-content: center;
 }
 
+.img-recette-details {
+  width: 300px;
+}
+
 .infosRecetteRow {
   margin-bottom: 1em;
 }
