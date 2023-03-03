@@ -101,6 +101,7 @@ class RecetteType extends AbstractType
                     'Inde' => 'Inde',
                     'Indonésie' => 'Indonésie',
                     'Israël' => 'Israël',
+                    'Turquie' => 'Turquie',
                     'Italie' => 'Italie',
                     'Liban' => 'Liban',
                     'Royaume-Uni' => 'Royaume-Uni',
