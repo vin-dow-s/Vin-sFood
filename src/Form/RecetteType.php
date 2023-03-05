@@ -104,6 +104,7 @@ class RecetteType extends AbstractType
                     'Turquie' => 'Turquie',
                     'Italie' => 'Italie',
                     'Liban' => 'Liban',
+                    'Republique Tchèque' => 'RepubliqueTcheque',
                     'Royaume-Uni' => 'Royaume-Uni',
                     'Suisse' => 'Suisse',
                     'Vietnam' => 'Vietnam',
