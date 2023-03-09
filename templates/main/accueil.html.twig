@@ -71,12 +71,13 @@
                                     <div>
                                         <div class="img-box">
                                             <!-- IMAGE RECETTE -->
-                                            <img src="{{ asset('images/recettes/'~recette.imageName) }}" alt="Recette">
-                                            <!-- LOGO VEGGIE
-                                            {#
-                                            <img src="{{ asset('images/veggie.png') }}" id="veggie">
-                                            #}
-                                            -->
+                                                <img src="{{ asset('images/recettes/'~recette.thumbnail) }}" alt="Recette">
+
+                                                <!-- LOGO VEGGIE
+                                                {#
+                                                <img src="{{ asset('images/veggie.png') }}" id="veggie">
+                                                #}
+                                                -->
                                             {% if app.user %}
                                                 <!-- LOGO MODIFIER RECETTE (ADMIN ONLY) -->
                                                 <a href="{{ path('modifierRecette', {'id' : recette.id}) }}" id="edit"><img src="{{ asset('images/edit.png') }}" alt="Edit"></a>

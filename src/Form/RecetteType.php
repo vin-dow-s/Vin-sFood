@@ -6,6 +6,7 @@ use App\Entity\Recette;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -117,6 +118,7 @@ class RecetteType extends AbstractType
                 'expanded' => false,
                 'required' => true,
             ])
+            /* V1 : Ajout d'une seule image avec Vich
             ->add('imageFile', VichImageType::class, [
                 'label' => 'Photo de la recette',
                 'attr' => [
@@ -124,6 +126,14 @@ class RecetteType extends AbstractType
                     'style' => 'text-align: center',
                     'onchange' => 'loadFile(event)',
                 ],
+                'mapped' => false,
+                'required' => false
+            ])
+            */
+            //V2 : Ajout de plusieurs images sans Vich
+            ->add('images', FileType::class, [
+                'label' => false,
+                'multiple' => true,
                 'mapped' => false,
                 'required' => false
             ])

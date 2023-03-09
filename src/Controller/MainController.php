@@ -15,7 +15,7 @@ class MainController extends AbstractController
      */
     public function listeRecettes(RecetteRepository $repo): Response
     {
-        $recettes = $repo->findBy([], ['dateAjout' => 'DESC']);;
+        $recettes = $repo->findBy([], ['dateAjout' => 'DESC']);
         return $this->render('main/accueil.html.twig', [
             "recettes" => $recettes
         ]);

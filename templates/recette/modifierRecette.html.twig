@@ -53,13 +53,19 @@
                               {{ form_row(recetteForm.etapes) }}
                                     {{ form_errors(recetteForm.categorie, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.categorie) }}
-                                    {{ form_errors(recetteForm.imageFile, {'class': 'error-message'}) }}
-                              {{ form_row(recetteForm.imageFile) }}
+                                    {{ form_errors(recetteForm.images, {'class': 'error-message'}) }}
+                              {{ form_row(recetteForm.images) }}
                                   <div style="display: flex; justify-content: center">
                                       <img id="imgPreview"/>
                                   </div>
+                              {% for image in recette.images %}
+                                <div class="img-recette">
+                                    <img src="{{ asset('images/recettes/'~image.name) }}" class="img-recette-details" alt="Recette">
+                                    <a href="{{ path('supprimerImage', {'id': image.id}) }}" class="delete-image-link" data-delete data-token="{{ csrf_token('delete' ~ image.id) }}">Supprimer</a>
+                                </div>
+                              {% endfor %}
                               <div class="form-submit">
-                                  {{ form_row(recetteForm.submit) }}
+                                  {{ form_row(recetteForm.submit, {'label': 'MODIFIER'}) }}
                               </div>
                               {{ form_end(recetteForm) }}
                           </form>
@@ -72,7 +78,8 @@
   <!-- end food section -->
   </main>
 
-<script>
+    <script src="{{ asset('js/images.js') }}"></script>
+    <script>
     let loadFile = function(event) {
         let imgPreview = document.getElementById('imgPreview');
         imgPreview.src = URL.createObjectURL(event.target.files[0]);
@@ -80,5 +87,5 @@
             URL.revokeObjectURL(imgPreview.src) // free memory
         }
     };
-</script>
+    </script>
 {% endblock %}
