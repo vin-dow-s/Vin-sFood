@@ -85,6 +85,10 @@ padding-left: 0;
     margin-top: 47px;
   }
 
+  .img-recette-details {
+    width: 300px;
+  }
+
 }
 
 @media (max-width: 767px) {
