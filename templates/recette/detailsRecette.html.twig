@@ -85,8 +85,8 @@
                 {% for image in recette.images %}
                     {% if count > 0 %}
                     <div class="img-recette">
-                        <a href="{{ asset('images/recettes/'~image.name) }}" class="img-recette-details" data-lightbox="gallery">
-                            <img src="{{ asset('images/recettes/'~image.name) }}"  alt="Recette">
+                        <a href="{{ asset('images/recettes/'~image.name) }}" data-lightbox="gallery">
+                            <img src="{{ asset('images/recettes/'~image.name) }}" class="img-recette-details" alt="Recette">
                         </a>
                     </div>
                     {% endif %}

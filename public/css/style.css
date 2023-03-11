@@ -391,6 +391,15 @@ a:active {
           transform: scale(1.1);
 }
 
+.img-recette-details {
+  max-height: 25em;
+}
+
+.img-recette-details:hover {
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+
 .food_section .btn-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -905,8 +914,7 @@ a:active {
 .gallery {
   display: flex;
   align-items: center;
-  justify-content: center;
-
+  justify-content: space-evenly;
 }
 
 .delete-image-link {

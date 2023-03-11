@@ -86,7 +86,9 @@ padding-left: 0;
   }
 
   .img-recette-details {
-    width: 300px;
+    padding-bottom: 2em;
+    max-width: 20em;
+    max-height: 20em;
   }
 
 }
@@ -136,6 +138,11 @@ padding-left: 0;
   .col-md-3 {
       order: 1;
       display: block;
+  }
+
+  .gallery {
+    display: block;
+    text-align: center;
   }
 }
 
