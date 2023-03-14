@@ -1,5 +1,5 @@
 # Vin's Food
-## Recettes de cuisine
+## :fork_and_knife: Recettes de cuisine :fork_and_knife:
 
 Ce projet regroupe mes recettes de cuisine personnelles illustrées et détaillées (inspirées d'un livre de cuisine), en incluant la possibilité de filtrer les recettes par pays d'origine.
 
@@ -7,10 +7,10 @@ Une recette est définie en page d'accueil par un nom, une miniature (thumbnail)
 La page "Détails" permet d'accéder à toutes les étapes de la recette, la liste complète des ingrédients, les temps (préparation, cuisson...), et à d'autres photos complémentaires.
 
 Un système d'authentification est présent pour me permettre d'accéder à toutes les opérations du CRUD en tant qu'admin.
-Un invité peut simplement voir les recettes sans intéragir avec (création de compte pour le moment désactivée).
+Un visiteur peut simplement voir les recettes sans intéragir avec (création de compte pour le moment désactivée).
 
 _________________
-### 12/03/2023
+### 12/03/2023 :heavy_check_mark:
 #### Ajout d'une gallerie de photos Lightbox pour chaque recette
 Création d'une entité Images en BDD qui contiendra toutes les photos associées à une recette, et modification de l'entité Recette existante en ajoutant un champ "thumbnail" qui contiendra la miniature de la recette affichée sur la page d'accueil.
 
