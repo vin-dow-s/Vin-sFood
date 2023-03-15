@@ -102,6 +102,11 @@ class Recette
      */
     private $thumbnail;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $veggie;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -298,6 +303,18 @@ class Recette
     {
         $images = $this->getImages();
         return $images->isEmpty() ? null : $images->first();
+    }
+
+    public function isVeggie(): ?bool
+    {
+        return $this->veggie;
+    }
+
+    public function setVeggie(bool $veggie): self
+    {
+        $this->veggie = $veggie;
+
+        return $this;
     }
 
 

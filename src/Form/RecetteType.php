@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Recette;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -68,6 +69,12 @@ class RecetteType extends AbstractType
                 ],
                 'label' => 'Aperçu des ingrédients',
                 'required' => true,
+            ])
+            ->add('veggie', CheckboxType::class, [
+                'attr' => [
+                    'style' => 'margin-left: 5px; margin-bottom: 25px'
+                ],
+                'label' => 'Recette végétarienne'
             ])
             ->add('listeIngredients', TextareaType::class, [
                 'attr' => [

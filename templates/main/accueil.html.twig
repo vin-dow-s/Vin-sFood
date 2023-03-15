@@ -43,6 +43,7 @@
                 <!-- FILTRES PAYS -->
                 <ul class="filters_menu">
                     <li class="active" data-filter="*" style="padding-top: 9px">TOUT</li>
+                    <li data-filter=".veggie"><img src="{{ asset('images/veggie.png') }}" style="width: 25px;" alt="Veggie"> VEGETARIEN</li>
                     <li data-filter=".France"><img src="{{ asset('images/flags/France.png') }}" style="width: 25px;" alt="France"></li>
                     <li data-filter=".Italie"><img src="{{ asset('images/flags/Italie.png') }}" style="width: 25px;" alt="Italie"></li>
                     <li data-filter=".Royaume-Uni"><img src="{{ asset('images/flags/Royaume-Uni.png') }}" style="width: 25px;" alt="Royaume-Uni"></li>
@@ -61,24 +62,33 @@
                     <li data-filter=".Vietnam"><img src="{{ asset('images/flags/Vietnam.png') }}" style="width: 25px;" alt="Vietnam"></li>
                 </ul>
 
+                <!-- LEGENDE {#
+                <div style="text-align: center">
+                    <p style="font-size: 0.8rem; font-weight: lighter; font-style: italic">
+                        <img src="{{ asset('images/veggie.png') }}" alt="Feuilles">
+                        = recette végétarienne
+                    </p>
+                </div>
+                #} -->
                 <!-- RECETTES -->
                 <div class="filters-content">
                     <div class="row grid">
                         {% if not recettes is same as([])  %}
                             <!-- CARTE D'UNE RECETTE -->
                             {% for recette in recettes %}
-                            <div class="col-sm-6 col-lg-4 all {{ recette.categorie }}">
+                            <div class="col-sm-6 col-lg-4 all {{ recette.categorie }} {% if recette.veggie %} veggie{% endif %}">
                                 <div class="box">
                                     <div>
                                         <div class="img-box">
                                             <!-- IMAGE RECETTE -->
                                                 <img src="{{ asset('images/recettes/'~recette.thumbnail) }}" alt="Recette">
 
-                                                <!-- LOGO VEGGIE
-                                                {#
-                                                <img src="{{ asset('images/veggie.png') }}" id="veggie">
-                                                #}
-                                                -->
+                                                <!-- LOGO VEGGIE -->
+                                                {% if recette.veggie %}
+                                                    <img src="{{ asset('images/veggie.png') }}" id="veggie">
+                                                {% endif %}
+
+
                                             {% if app.user %}
                                                 <!-- LOGO MODIFIER RECETTE (ADMIN ONLY) -->
                                                 <a href="{{ path('modifierRecette', {'id' : recette.id}) }}" id="edit"><img src="{{ asset('images/edit.png') }}" alt="Edit"></a>

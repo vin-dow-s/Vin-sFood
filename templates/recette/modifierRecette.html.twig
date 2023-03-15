@@ -47,6 +47,8 @@
                               </div>
                                     {{ form_errors(recetteForm.apercuIngredients, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.apercuIngredients) }}
+                                    {{ form_errors(recetteForm.veggie, {'class': 'error-message'}) }}
+                              {{ form_row(recetteForm.veggie) }}
                                     {{ form_errors(recetteForm.listeIngredients, {'class': 'error-message'}) }}
                               {{ form_row(recetteForm.listeIngredients) }}
                                     {{ form_errors(recetteForm.etapes, {'class': 'error-message'}) }}

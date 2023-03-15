@@ -21,6 +21,7 @@ main {
 
 .layout_padding-bottom {
   padding-bottom: 90px;
+  min-height: 100vh;
 }
 
 h1,
@@ -251,6 +252,7 @@ a:active {
           justify-content: center;
   list-style-type: none;
   margin: 45px 0 20px 0;
+  line-height: initial;
 }
 
 .food_section .filters_menu li {
@@ -781,28 +783,25 @@ a:active {
 #veggie {
   width: 30px;
   height: 30px;
-  margin-top: 13px;
   position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: 13px;
+  top: 25px;
+  right: 25px;
 }
 
 #edit {
   width: 30px;
   height: 30px;
-  margin-top: 5px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 25px;
+  left: 25px;
 }
 
 #delete {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 47%;
-  right: 0;
+  top: 43%;
+  left: 25px;
 }
 
 .infosRecette {
