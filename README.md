@@ -1,6 +1,6 @@
 # Vin's Food 🍽️🍷
 
-Ce projet regroupe mes recettes de cuisine personnelles illustrées et détaillées (inspirées d'un livre de cuisine), en incluant la possibilité de filtrer les recettes par pays d'origine.
+Ce projet regroupe mes recettes de cuisine personnelles illustrées et détaillées (inspirées d'un livre de cuisine), en incluant la possibilité de filtrer les recettes par pays d'origine, ou végétariennes ou non.
 
 Une recette est définie en page d'accueil par un nom, une miniature (thumbnail), un aperçu des ingrédients, et un pays d'origine.   
 La page "Détails" permet d'accéder à toutes les étapes de la recette, la liste complète des ingrédients, les temps (préparation, cuisson...), et à d'autres photos complémentaires.
