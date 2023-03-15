@@ -9,6 +9,15 @@ Un système d'authentification est présent pour me permettre d'accéder à tout
 Un visiteur peut simplement voir les recettes sans intéragir avec (création de compte pour le moment désactivée).
 
 _________________
+##  15/03/2023 :white_check_mark:
+### Ajout d'un filtre "Végétarien"
+Création d'un champ ``veggie`` dans l'entité *Recette* : booléen qui indique si une recette est végétarienne ou non.
+
+Ajout du champ dans le formulaire d'ajout/modification d'une recette.
+
+Un logo "veggie" s'affiche maintenant sur la card de chaque recette végétarienne et un filtre `data-filter` permet d'afficher uniquement ces recettes là (on leur ajoute la classe `.veggie` dynamiquement, ce qui permet de les identifier).
+
+_________________
 ##  12/03/2023 :white_check_mark:
 ### Ajout d'une gallerie de photos Lightbox pour chaque recette
 Création d'une entité *Images* en BDD qui contiendra toutes les photos associées à une recette, et modification de l'entité *Recette* existante en ajoutant un champ `thumbnail` qui contiendra la miniature de la recette affichée sur la page d'accueil, ainsi qu'un champ `images` lié à l'entité correspondante et contenant toutes les photos d'une recette.
